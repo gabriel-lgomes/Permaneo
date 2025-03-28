@@ -44,6 +44,7 @@ export default function CoursePlayer({
     setIsPaused(false);
   }
 
+  // Function to play the course
   function handlePlay(playerRef: HTMLVideoElement) {
     playerRef.play();
     setSavedTime(1);
