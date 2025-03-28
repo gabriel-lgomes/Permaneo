@@ -5,8 +5,8 @@ import Link from "next/link";
 import React, { FC, useState } from "react";
 
 const Header: FC = () => {
+  // State to control the menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
