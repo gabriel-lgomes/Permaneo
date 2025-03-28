@@ -7,7 +7,7 @@ const Button: FC<ButtonProps> = ({ children, type, ...props }) => {
       {...props}
       className={`${
         type === "primary" ? "bg-primary text-white" : "bg-secondary text-black"
-      } rounded-xl px-6 py-2 w-fit cursor-pointer`}
+      } rounded-xl px-6 py-2 w-fit cursor-pointer transition-all hover:scale-105`}
     >
       {children}
     </button>
