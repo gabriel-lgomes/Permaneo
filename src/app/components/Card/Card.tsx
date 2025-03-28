@@ -1,7 +1,8 @@
 import { CardProps } from "@/app/interfaces/Card";
 import Image from "next/image";
-import Link from "next/link";
 import React, { FC } from "react";
+import Button from "../Button/Button";
+import Link from "next/link";
 
 const Card: FC<CardProps> = ({ title, text, image, id }) => {
   return (
@@ -17,11 +18,8 @@ const Card: FC<CardProps> = ({ title, text, image, id }) => {
         <p className="text-xl">{title}</p>
       </div>
       <p className="lg:min-h-[72px]">{text}</p>
-      <Link
-        href={id}
-        className="bg-primary hover:bg-primary/80 transition-colors rounded-xl text-white text-sm w-fit px-4 py-2"
-      >
-        Acessar Curso
+      <Link href={id}>
+        <Button type="primary">Acessar Curso</Button>
       </Link>
     </div>
   );

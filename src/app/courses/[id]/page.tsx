@@ -1,7 +1,7 @@
 "use client";
 
+import Button from "@/app/components/Button/Button";
 import { useCourses } from "@/app/context/CoursesContext";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -41,12 +41,9 @@ export default function CourseDetails({
               </p>
             </div>
             <div>
-              <Link
-                href={"#"}
-                className="text-2xl text-white bg-primary rounded-xl px-8 py-2"
-              >
+              <Button type="primary" href={"#"}>
                 Comprar curso
-              </Link>
+              </Button>
             </div>
           </div>
         </div>

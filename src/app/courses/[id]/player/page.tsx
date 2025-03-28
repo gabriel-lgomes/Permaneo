@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/components/Button/Button";
 import { useCourses } from "@/app/context/CoursesContext";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -83,28 +84,28 @@ export default function CoursePlayer({
           {/* Buttons of Controll */}
           <div className="flex gap-4">
             {savedTime > 0 && (
-              <button
-                className="px-4 py-2 bg-secondary text-black rounded transition cursor-pointer"
+              <Button
+                type="secondary"
                 onClick={() => handleRestart(playerRef.current!)}
               >
                 Reiniciar curso
-              </button>
+              </Button>
             )}
             {savedTime === 0 && (
-              <button
-                className="px-4 py-2 bg-primary text-white rounded transition cursor-pointer"
+              <Button
+                type="primary"
                 onClick={() => handlePlay(playerRef.current!)}
               >
                 Iniciar curso
-              </button>
+              </Button>
             )}
             {isPaused ? (
-              <button
-                className="px-4 py-2 bg-primary text-white rounded transition cursor-pointer"
+              <Button
+                type="primary"
                 onClick={() => handleResume(playerRef.current!)}
               >
                 Continuar assistindo
-              </button>
+              </Button>
             ) : null}
           </div>
         </div>

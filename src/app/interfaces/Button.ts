@@ -1,8 +1,5 @@
-import { ComponentProps } from "react";
-
-export type ButtonProps = ComponentProps<"a"> & {
+export type ButtonProps = {
   children: React.ReactNode;
   type: "primary" | "secondary";
-  class?: string;
-  href: string;
+  onClick?: () => void;
 };
