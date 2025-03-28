@@ -6,14 +6,14 @@ import { user } from "../data/users";
 import { Course } from "../interfaces/Course";
 import { User } from "../interfaces/User";
 
-// Definindo o tipo do contexto
+// Defining the context type
 interface CoursesContextType {
   courses: Course[];
   user: User;
   isCoursePurchased: (courseId: number) => boolean;
 }
 
-// Criando o contexto com tipo explícito e valor inicial
+// Creating the context with explicit type and initial value
 const CoursesContext = createContext<CoursesContextType>({
   courses: [],
   user: {
@@ -24,9 +24,9 @@ const CoursesContext = createContext<CoursesContextType>({
   isCoursePurchased: () => false,
 });
 
-// Provider que disponibiliza o contexto
+// Provider of context
 export const CoursesProvider = ({ children }: { children: ReactNode }) => {
-  // Função para verificar se curso foi comprado
+  // function to check if a course is purchased
   const isCoursePurchased = (courseId: number) => {
     return user.courses.some((course) => course.courseId === courseId);
   };
@@ -38,7 +38,7 @@ export const CoursesProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Hook para acessar o contexto
+// Hook for access the context
 export const useCourses = () => {
   const context = useContext(CoursesContext);
   if (!context) {
