@@ -24,13 +24,17 @@ export default function CourseDetails({
         <div className="flex flex-col gap-6">
           <h1 className="text-3xl font-black">{course.title}</h1>
           <p className="text-2xl">{course.description}</p>
-          <div className="flex items-center flex-wrap gap-14">
+          <div className="flex items-center flex-wrap lg:gap-14 gap-8">
             <div>
               <p className="text-2xl font-black">
-                R$ {course.price.toFixed(2)}
+                {/* format price */}
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(course.price)}
               </p>
               <p className="text-xs">
-                This course starts at{" "}
+                Curso criado em:{" "}
                 {new Date(course.created_at).toLocaleDateString("pt-BR")}
               </p>
             </div>
