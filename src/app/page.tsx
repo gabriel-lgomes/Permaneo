@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <section className="py-8">
         <div className="container mx-auto lg:max-w-[1280px] max-w-full">
-          <h1 className="text-4xl font-black">Courses</h1>
+          <h1 className="text-4xl font-black">Cursos</h1>
           <div className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-x-4 gap-y-8 py-8">
             {/* Map in the courses case it exists */}
             {courses &&

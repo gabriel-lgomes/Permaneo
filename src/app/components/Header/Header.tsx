@@ -54,7 +54,7 @@ const Header: FC = () => {
                     className="text-xl hover:text-primary transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Cursos Favoritos
+                    Favoritos
                   </Link>
                 </li>
               </ul>
