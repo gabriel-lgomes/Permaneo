@@ -14,6 +14,7 @@ export default function CourseDetails({
   const { courses, isCoursePurchased } = useCourses();
   const course = courses.find((c) => c.id === Number(id));
 
+  // Redirect if course is purchased
   if (isCoursePurchased(Number(id))) {
     redirect(`${id}/player`, undefined);
   }
@@ -34,7 +35,8 @@ export default function CourseDetails({
                 }).format(course.price)}
               </p>
               <p className="text-xs">
-                Curso criado em:{" "}
+                {/* format date */}
+                Curso criado em:
                 {new Date(course.created_at).toLocaleDateString("pt-BR")}
               </p>
             </div>
