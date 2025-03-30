@@ -6,8 +6,12 @@ import { useFavorites } from "@/app/hooks/useFavorites";
 import { redirect } from "next/navigation";
 import React from "react";
 
-export default function CourseDetails() {
-  const id = 1;
+export default function CourseDetails({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = React.use(params);
   const { courses, isCoursePurchased } = useCourses();
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
 
