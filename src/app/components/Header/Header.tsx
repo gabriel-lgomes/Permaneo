@@ -14,13 +14,15 @@ const Header: FC = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-8">
           <div className="flex gap-4 items-center">
-            <Image
-              src="/grupopermaneo_logo.webp"
-              alt="Grupo Permaneo"
-              width={70}
-              height={70}
-              className="rounded-full"
-            />
+            <Link href="/">
+              <Image
+                src="/grupopermaneo_logo.webp"
+                alt="Grupo Permaneo"
+                width={70}
+                height={70}
+                className="rounded-full"
+              />
+            </Link>
             <h1 className="text-3xl font-black">Grupo Permaneo</h1>
           </div>
 
