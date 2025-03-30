@@ -33,7 +33,7 @@ const Header: FC = () => {
           <div
             className={`lg:flex ${
               isMenuOpen
-                ? "block absolute px-2 py-4 bg-secondary max-w-11/12 left-5 top-28 w-full"
+                ? "block absolute z-10 px-2 py-4 bg-secondary max-w-11/12 left-5 top-28 w-full"
                 : "hidden"
             }  gap-8`}
           >
