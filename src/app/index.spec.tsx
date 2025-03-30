@@ -70,7 +70,7 @@ describe("Test rendering the home page", () => {
     expect(screen.getByText(mockCourse.title)).toBeInTheDocument();
     expect(screen.getByText(mockCourse.description)).toBeInTheDocument();
 
-    // Verifica se o link tem o ID correto
+    // Verify if id is correct
     const cardLink = screen.getByRole("link");
     expect(cardLink).toHaveAttribute("href", `/courses/${mockCourse.id}`);
   });
