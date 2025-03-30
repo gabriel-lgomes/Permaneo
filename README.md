@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto Criado com React, TypeScript e Tailwind CSS
 
-## Getting Started
+Este projeto foi criado utilizando **React**, **TypeScript** e **Tailwind CSS**. Ele também inclui configurações para **testes unitários** utilizando **Vitest**, **React Testing Library** e cobertura de testes.
 
-First, run the development server:
+## Instalação
+
+### 1. Clone o repositório
+
+Clone este repositório para sua máquina local:
+
+```bash
+git clone <url-do-repositorio>
+```
+
+### 2. Instale as dependências
+
+Dentro da pasta do projeto, execute o comando para instalar as dependências:
+
+```bash
+npm install
+```
+
+### 3. Inicie o servidor de desenvolvimento
+
+Para iniciar o servidor de desenvolvimento e ver a aplicação em funcionamento, use o seguinte comando:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Isso iniciará o servidor localmente, geralmente em `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Estrutura dos Testes
 
-## Learn More
+Os arquivos de testes estão localizados no projeto sob o nome `index.spec.tsx`. Para validar os testes, basta acessar os arquivos correspondentes.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Rodando os Testes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para rodar os testes unitários, use o seguinte comando no terminal:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run test
+```
 
-## Deploy on Vercel
+Isso executará os testes configurados no projeto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Verificando a Cobertura dos Testes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para ver a cobertura dos testes, utilize o comando:
+
+```bash
+npm run test:coverage
+```
+
+Esse comando gerará uma pasta chamada `coverage` dentro do seu projeto. Para visualizar a cobertura dos testes, siga as etapas abaixo:
+
+1. Navegue até a pasta `coverage` gerada.
+2. Abra o arquivo `index.html` dentro dessa pasta.
+3. Use uma extensão como ex: **Live Server** para abrir o arquivo no navegador e visualizar a cobertura dos testes.
+
+Isso permitirá que você veja o que foi testado e a cobertura dos testes no projeto.
+
+## Dependências
+
+Este projeto utiliza as seguintes dependências:
+
+- **React** e **React-dom**: Biblioteca para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Tailwind CSS**: Framework CSS para construção rápida de designs responsivos.
+- **Vitest**: Framework de testes unitários com suporte a cobertura.
+- **React Testing Library**: Biblioteca para facilitar testes de componentes React.
+- **ESLint**: Ferramenta de análise estática de código para garantir qualidade e consistência.
+- **Prettier**: Ferramenta para formatação de código.
